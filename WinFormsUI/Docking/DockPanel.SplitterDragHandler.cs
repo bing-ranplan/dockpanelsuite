@@ -103,7 +103,16 @@ namespace WeifenLuo.WinFormsUI.Docking
                 Outline.Close();
 
                 if (!abort)
-                    DragSource.MoveSplitter(GetMovingOffset(Control.MousePosition));
+                {
+                    try
+                    {
+                        DragSource.MoveSplitter(GetMovingOffset(Control.MousePosition));
+                    }
+                    catch (InvalidDockPortionException e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                }
 
                 DragSource.EndDrag();
                 DockPanel.ResumeLayout(true, true);

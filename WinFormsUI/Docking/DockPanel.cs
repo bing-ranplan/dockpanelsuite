@@ -370,7 +370,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                    throw new InvalidDockPortionException(nameof(DockBottomPortion), value);
 
                 if (Math.Abs(value - m_dockBottomPortion) < double.Epsilon)
                     return;
@@ -402,7 +402,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                    throw new InvalidDockPortionException(nameof(DockLeftPortion), value);
 
                 if (Math.Abs(value - m_dockLeftPortion) < double.Epsilon)
                     return;
@@ -433,7 +433,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                    throw new InvalidDockPortionException(nameof(DockRightPortion), value);
 
                 if (Math.Abs(value - m_dockRightPortion) < double.Epsilon)
                     return;
@@ -465,7 +465,7 @@ namespace WeifenLuo.WinFormsUI.Docking
             set
             {
                 if (value <= 0)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                    throw new InvalidDockPortionException(nameof(DockTopPortion), value);
 
                 if (Math.Abs(value - m_dockTopPortion) < double.Epsilon)
                     return;

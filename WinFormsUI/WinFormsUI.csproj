@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Docking\DockPanelSkin.cs">
     </Compile>
+    <Compile Include="Docking\InvalidDockPortionException.cs" />
     <Compile Include="Docking\IPaintingService.cs" />
     <Compile Include="Docking\LayoutUtils.cs" />
     <Compile Include="Docking\PatchController.cs" />
