@@ -145,7 +145,8 @@ namespace WeifenLuo.WinFormsUI.Docking
                 if (currentIndex == index)
                     return content;
             }
-            throw (new ArgumentOutOfRangeException());
+
+            return EmptyDockContent.Instance;
         }
 
         private int GetIndexOfVisibleContents(IDockContent content)
